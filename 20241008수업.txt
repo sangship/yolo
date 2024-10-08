@@ -1,0 +1,15 @@
+
+커스텀 데이터셋 만들기
+
+n, s 모델?
+
+
+레이블링 툴
+
+yolov11에서 pip install labelimg 실행
+
+C:\Users\SBA>labelimg C:\Users\SBA\yolov11 C:\Users\SBA\yolov11\classes.txt
+
+
+https://github.com/developer0hye/Yolo_Label?tab=readme-ov-file
+YoloLabel_v1.2.1

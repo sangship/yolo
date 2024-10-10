@@ -1,0 +1,39 @@
+albumentations 예제
+
+yolov11 가상환경에서...
+!git clone https://github.com/albumentations-team/albumentations_examples.git
+
+
+
+https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/
+
+
+pip install albumentations
+
+
+
+example.ipynb
+
+example_bboxes.ipynb
+
+이미지 변환할 때, 박스 파라미터 설정해줘야 한다...
+transform = A.Compose(
+    [A.ShiftScaleRotate(shift_limit=(0, 00), scale_limit=(0, 0), rotate_limit=(-45, 45), p=0.5)],
+    bbox_params=A.BboxParams(format='coco', min_area=30000, min_visibility=0.9, label_fields=['category_ids']),
+)
+
+
+
+albumentation_yolo 박스좌표 변환과정.ipynb
+
+회전시킬 때, 등등...BBox크기가 달라질 수 있다.
+이때, 아래 코드 참조에서 "rotate_method='ellipse'" 사용한다....
+transform = A.Compose(
+    [A.Rotate(limit=(20, 20), p=0.5, rotate_method='ellipse')],
+    bbox_params=A.BboxParams(format='yolo', label_fields=['category_ids']),
+)
+
+
+
+
+

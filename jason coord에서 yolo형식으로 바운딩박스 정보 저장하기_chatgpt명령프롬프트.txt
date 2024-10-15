@@ -1,7 +1,7 @@
 Labels 폴더를 생성한다.		
 			
 
-Jason 폴더안에 있는 json파일 하나씩 가져와서 아래와 같은 정보를 얻어낸다.,			
+Jason 폴더안에 있는 json파일 하나씩 읽어와서, Learning Data Info에서 아래와 같은 정보를 얻어낸다.,			
 	1. resolution (Jason 이미지 크기)		
 	2. class_id( Jason 차량 종류)		
 	3. coord(Jason 바운딩 박스 좌표)		

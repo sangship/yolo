@@ -1,0 +1,29 @@
+Labels 폴더를 생성한다.		
+			
+
+Jason 폴더안에 있는 json파일 하나씩 가져와서 아래와 같은 정보를 얻어낸다.,			
+	1. resolution (Jason 이미지 크기)		
+	2. class_id( Jason 차량 종류)		
+	3. coord(Jason 바운딩 박스 좌표)		
+			
+			
+Yolo 클래스 번호(0, 1, 2, 3, 4, 5, 6) 매핑			
+	car-01	승용/승합	0
+	car-02	버스	1
+	car-03	소형화물차	2
+	car-04	중형화물차	3
+	car-05	대형화물차	4
+	car-06	이륜차	5
+	car-07	기타	6
+			
+Yolo 형식 변환 함수			
+	Jason의 coord에서 Yolo형식 좌표 방식으로 바꾼다.		
+			
+			
+Yolo 형식으로 변환된 데이터 저장			
+	class_id (0, 1, 2, 3, 4, 5, 6) 		
+	Yolo형식 좌표(x_center, y_center, width, height)		
+			
+			
+텍스트 파일 저장			
+	같은 (jason)파일명으로 Labels 폴더에 저장한다.		
